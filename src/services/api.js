@@ -18,11 +18,8 @@ import axios from "axios";
 
 export const getPopularMovies = async () => {
   try {
-    const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
-    console.log(SECRET_KEY);
-
-    const BASE_URL = import.meta.env.VITE_BASE_URL; // Corrected line
-    console.log(BASE_URL);
+    const SECRET_KEY = import.meta.env.VITE_REACT_SECRET_KEY;
+    const BASE_URL = import.meta.env.VITE_REACT_BASE_URL; // Corrected line
 
     const response = await axios.get(`${BASE_URL}/movie/popular`, {
       params: { api_key: SECRET_KEY },
@@ -36,10 +33,9 @@ export const getPopularMovies = async () => {
 
 export const searchMovies = async (query) => {
   try {
-    const SECRET_KEY = import.meta.env.VITE_SECRET_KEY;
-    console.log(SECRET_KEY);
+    const SECRET_KEY = import.meta.env.VITE_REACT_SECRET_KEY;
 
-    const BASE_URL = import.meta.env.VITE_BASE_URL; // Corrected line
+    const BASE_URL = import.meta.env.VITE_REACT_BASE_URL; // Corrected line
     console.log(BASE_URL);
     const response = await axios.get(`${BASE_URL}/search/movie`, {
       params: {

@@ -44,6 +44,7 @@ function Home() {
   };
   return (
     <div className="home">
+      
       <form onSubmit={handleSearch} className="search-from">
         <input
           type="text"
